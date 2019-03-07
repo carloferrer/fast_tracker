@@ -10,12 +10,10 @@ A WIP project; see [PROPOSAL.md](./docs/PROPOSAL.md) for more information.
 - On macOS...
   - `brew tap mongodb/brew`
   - `brew install mongodb-community@4.0`
-  - (optional) `mkdir <new database directory>`
-  - Update package.json `serve` script to point to database location.
 
 ## Running the Project
-- In one console window, `yarn serve` to "spin up" database.
-- In another console window, `yarn start` to run server script.
+- In one terminal window, `yarn serve` to initialise and "spin up" database.
+- In a separate terminal window, `yarn start` to run server script.
 
 ## Testing the Project
 Project must be running prior to testing.
