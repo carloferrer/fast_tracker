@@ -4,7 +4,7 @@
   "description": "Less tracking, more tasking.",
   "main": "index.js",
   "scripts": {
-    "serve": "mongod --dbpath ~/Personal/db_fast_tracker",
+    "serve": "if [ -d .mongo_database ]; then echo \"\n*** .mongo_database/ found ***\n\"; else mkdir .mongo_database && echo \"\n *** initialising .mongo_database/ ***\n\"; fi && sudo mongod --dbpath ./.mongo_database",
     "start": "nodemon --exec babel-node index",
     "test:list": "curl localhost:8080/api/item | jq",
     "test:add": "curl --data \"task=test_task&detail=test_detail\" localhost:8080/api/item"
