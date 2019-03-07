@@ -1,12 +1,19 @@
 BLUE="\033[0;34m"
 RED="\033[0;31m"
 DEFAULT="\033[0m"
+DB_NAME=".mongo_database/"
 
-if [ -d .mongo_database ]; then
-  printf "\n${BLUE}*** .mongo_database/ found ***${DEFAULT}\n\n"
+# Check for existence of database directory.
+if [ -d ${DB_NAME} ]; then
+  printf "\n${BLUE}*** ${DB_NAME} found ***${DEFAULT}\n\n"
 else
-  mkdir .mongo_database
-  printf "\n${RED}*** initialising .mongo_database/ ***${DEFAULT}\n\n"
+  # Ensure database directory isn't committed.
+  if ! grep -q ${DB_NAME} .gitignore; then
+    echo "${DB_NAME}" >> .gitignore
+  fi
+  mkdir ${DB_NAME}
+  printf "\n${RED}*** initialising ${DB_NAME} ***${DEFAULT}\n\n"
 fi
 
-sudo mongod --dbpath ./.mongo_database
+# (Initialise and) start database server.
+sudo mongod --dbpath ${DB_NAME}
