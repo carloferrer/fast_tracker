@@ -13,6 +13,8 @@ router.route('/item')
   .post(controller.createLine);
 
 router.route('/item/:id')
+  .patch(controller.updateLine)
+  .put(controller.updateLine)
   .delete(controller.deleteLine);
 
 export default router;

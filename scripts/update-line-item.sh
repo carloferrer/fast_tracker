@@ -1,0 +1,1 @@
+echo $(curl -X PUT -d "date=date_update_test&time=time_update_test&task=task_update_test&detail=detail_update_test" localhost:8080/api/item/$1) | jq
