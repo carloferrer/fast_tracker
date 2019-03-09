@@ -1,23 +1,18 @@
 import mongoose from 'mongoose';
-import now from './utils/now';
 
 /*
 ** Schema:
-** index | date | timestamp | task | detail
+** index | date | time | task | detail
 */
-
-const present = now();
 
 const schema = mongoose.Schema({
   date: {
     type: String,
     required: true,
-    default: present.date,
   },
   time: {
     type: String,
     required: true,
-    default: present.time,
   },
   task: {
     type: String,
@@ -31,8 +26,6 @@ const schema = mongoose.Schema({
 
 const lineItem = mongoose.model('line-item', schema);
 
-lineItem.get = (cb, limit) => {
-  lineItem.find(cb).limit(limit);
-};
+lineItem.get = (cb, limit) => lineItem.find(cb).limit(limit);
 
 export default lineItem;

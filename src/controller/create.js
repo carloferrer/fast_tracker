@@ -1,11 +1,13 @@
 import lineItem from '../model';
+import now from '../utils/now';
 
 function createLine(req, res) {
   const item = new lineItem();
   const input = req.body;
+  const present = now();
 
-  item.date = input.date || item.date;
-  item.timestamp = input.timestamp || item.timestamp;
+  item.date = input.date || present.date;
+  item.time = input.time || present.time;
   item.task = input.task;
   item.detail = input.detail;
 

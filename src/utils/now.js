@@ -1,4 +1,4 @@
-const now = () => {
+function now() {
   const rawFullDate = new Date();
 
   const rawParts = {
