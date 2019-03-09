@@ -11,6 +11,11 @@ A tool for keeping track of your day, utilised via the command line.  This is a 
   - `brew tap mongodb/brew`
   - `brew install mongodb-community@4.0`
 
+## Auxiliary Tools Setup
+This project leverages [jq](https://stedolan.github.io/jq/) to parse JSON responses at the CLI for legibility.
+- To install jq on macOS...
+  - `brew install jq`
+
 ## Running the Project
 - In one terminal window, `yarn serve` to initialise and "spin up" database.
 - In a separate terminal window, `yarn start` to run Express server.
