@@ -12,4 +12,7 @@ router.route('/item')
   .get(controller.read)
   .post(controller.create);
 
+router.route('/item/:id')
+  .delete(controller.deleteLine);
+
 export default router;
