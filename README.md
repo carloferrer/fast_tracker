@@ -17,9 +17,10 @@ A tool for keeping track of your day, utilised via the command line.  This is a 
 
 ## Testing the Project
 Database and Express servers must be running prior to testing.
-- `yarn test:list` to print table JSON.
 - `yarn test:add` to add arbitrary item.
-- `yarn test:delete <_id>` to delete item by `_id`.
+- `yarn test:list` to print table JSON.
+- `yarn test:update <id>` to update item by `_id`.
+- `yarn test:delete <id>` to delete item by `_id`.
 
 ## Stack
 - mongoDB
