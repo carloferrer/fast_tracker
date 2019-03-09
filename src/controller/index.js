@@ -1,5 +1,6 @@
 import createLine from './create';
-import deleteLine from './delete';
 import readLine from './read';
+import updateLine from './update';
+import deleteLine from './delete';
 
-export { createLine, deleteLine, readLine };
+export { createLine, updateLine, readLine, deleteLine };

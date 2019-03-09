@@ -1,11 +1,11 @@
 import lineItem from '../model';
 
 function deleteLine(req, res) {
-  const input = req.params;
+  const itemRef = req.params;
 
   lineItem.remove({
-    _id: input.id,
-  }, (err, contact) => {
+    _id: itemRef.id,
+  }, (err, item) => {
     if (err) res.send(err);
 
     res.json({
