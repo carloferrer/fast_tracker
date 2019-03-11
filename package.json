@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "bash scripts/initialise-server.sh",
     "start": "nodemon --exec babel-node index",
-    "test:add": "curl --data \"task=test_task&detail=test_detail\" localhost:8080/api/item | jq",
+    "test:add": "bash scripts/add-line-item.sh",
     "test:list": "curl localhost:8080/api/item | jq",
     "test:update": "bash scripts/update-line-item.sh",
     "test:delete": "bash scripts/delete-line-item.sh"
