@@ -6,10 +6,10 @@
   "scripts": {
     "serve": "bash scripts/initialise-server.sh",
     "start": "nodemon --exec babel-node index",
-    "test:add": "bash scripts/add-line-item.sh",
-    "test:list": "curl localhost:8080/api/item | jq",
-    "test:update": "bash scripts/update-line-item.sh",
-    "test:delete": "bash scripts/delete-line-item.sh"
+    "test:add": "bash scripts/test/add-line-item.sh",
+    "test:list": "bash scripts/test/list-all-items.sh",
+    "test:update": "bash scripts/test/update-line-item.sh",
+    "test:delete": "bash scripts/test/delete-line-item.sh"
   },
   "repository": {
     "type": "git",
