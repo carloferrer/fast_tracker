@@ -1,5 +1,5 @@
 # fast_tracker
-A tool for keeping track of your day, utilised via the command line.  This is a WIP project; see [docs/PROPOSAL.md](./docs/PROPOSAL.md) for more information.
+A tool for keeping track of your day, utilised via the command line.  This is a functional but WIP project; see [docs/PROPOSAL.md](./docs/PROPOSAL.md) for more information.
 
 ## Repo Setup
 - Clone this repository.
